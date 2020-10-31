@@ -22,9 +22,7 @@
 /*
 /*<Types kotlin*/
 val firstName: String = "Basked"
-val firstName2 = "basked"
 val lastName: String = "Teksab"
-val lastName2 = "Teksab"
 var age = 33
 const val CREW = "LAST MOVE"
 /*Types kotlin>*/
