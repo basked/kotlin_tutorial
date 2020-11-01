@@ -28,10 +28,18 @@ const val CREW = "LAST MOVE"
 /*Types kotlin>*/
 */
 
+/*< STRING TEMPLATES*/
+val firstName2 = "basket"
+val lastnametName2 = "teksab"
+val age2 = 34
+
+/*STRING TEMPLATES >*/
+
 fun main(argd: Array<String>) {
-    println("--------------------TYPES--------------------------")
+/*
 /*
 /*< TYPES KOTLIN */
+    libBas.separTheme("TYPES", 50)
     age = 70
     var temperature = 1
     val condition1 = if (temperature < -5) "Холодно" else if (temperature < 5) "Около нуля" else "Жарко как в Ташкенте"
@@ -98,12 +106,38 @@ fun main(argd: Array<String>) {
     println("Safe cast Int to String = $obj4. No exception!!!")
 /*TYPES KOTLIN>*/
 */
-    println("---------------STRING TEMPLATES--------------------")
-/*
 /*< STRING TEMPLATES*/
-    println("bas")
+    libBas.separTheme("STRING TEMPLATES")
+    println("Имя: " + firstName2 + ", фамилия: " + lastnametName2 + ",в возрасте: " + age2 + " лет зарабатывает 1500$")
+    //equivalent for kotlin
+    println("Имя: $firstName2, фамилия: $lastnametName2,в возрасте: ${age2 - 4} лет зарабатывал 2500$\$")
+
+    libBas.separTheme("Интерполяция строк")
+    //строки в которых не производится интерполяция /* java */
+    println("\\\'My nickname is \"BASKED\"\'\\")
+    //строки в которых не производится интерполяция /* kotlin */
+    println("""\'My nickname is "BASKED"'\""")
+
+    libBas.separTheme("Несколько строк")
+    println(
+        """
+             One line
+             Two line
+             Three line
+        """.trimIndent()
+    )
+    println(
+        """
+        |SELECT * FROM Users
+        |WHERE gae>35
+        |GROUP BY Name
+    """.trimMargin()
+    )
 /*STRING TEMPLATES>*/
 */
+
+    libBas.separTheme("basket", 40)
+    libBas.separTheme("Интерполяция строк", 40)
     println("Hello, World")
 }
 
