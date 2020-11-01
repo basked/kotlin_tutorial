@@ -1,5 +1,5 @@
 /*
-/*<Comments*/
+/*<COMMENTS*/
 
 // One line comments
 
@@ -20,21 +20,59 @@
 /*Comments>*/
  */
 /*
-/*<Types kotlin*/
+/*<TYPES KOTLIN*/
 val firstName: String = "Basked"
 val lastName: String = "Teksab"
 var age = 33
 const val CREW = "LAST MOVE"
 /*Types kotlin>*/
 */
-
-/*< STRING TEMPLATES*/
+/*
+/*<STRING TEMPLATES*/
 val firstName2 = "basket"
 val lastnametName2 = "teksab"
 val age2 = 34
-
 /*STRING TEMPLATES >*/
+*/
+/*
+/*<FUNCTIONS*/
+/*1*/
+fun greating(firstName: String, lastName: String) {
+    println("[Ex1] Hello, $firstName, $lastName")
+}
 
+/*2 overload whith other param*/
+fun greating(firstName: String, lastName: String, age: Int = 34) {
+    println("[Ex2] Hello, $firstName, $lastName, $age")
+}
+/*3 Type and return syntacsis*/
+/*
+     fun greating(firstName: String, lastName: String, nick: String = "teksab"): String {
+        return "[Ex3]$firstName, $lastName, $nick [Ex3]"
+    }
+ */
+
+/*4* equivalent prev, if use one operator */
+fun greating(firstName: String, lastName: String, nick: String = "teksab") =
+    "[Ex4] Hello, $firstName, $lastName, $nick"
+
+/*5 precoditions*/
+fun greating(firstName: String) {
+    require(!firstName.isBlank()) { "Укажите имя" }
+    println("[Ex5] Hello, $firstName ")
+}
+
+/*6 precoditions*/
+fun greating(firstName: String, age: Int = 0) {
+    require(!firstName.isBlank()) { "Укажите имя" }
+    //!!require(age=0) {"ds"} = TODO("Почему только с отрицанием  != работает ??")
+    require(age != 0) { "Ещё не родился? Введи нужный возраст!" }
+    println("[Ex6] Hello, $firstName, age=$age")
+    //()=TODO("""Как работают остальные функции requireNotNull(), check(), assert()" +
+
+}
+/*<FUNCTIONS>*/
+*/
 fun main(argd: Array<String>) {
 /*
 /*<TYPES KOTLIN */
@@ -136,8 +174,8 @@ fun main(argd: Array<String>) {
     )
 /*STRING TEMPLATES>*/
 */
-
-/*<FUNCTION*/
+/*
+/*<FUNCTIONS*/
     libBas.separTheme("FUNCTION")
     /*1*/
     fun greating(firstName: String, lastName: String) {
@@ -195,10 +233,8 @@ fun main(argd: Array<String>) {
     }
     /*6-1*/ greating("[Ex6-1] basked", 35)
 
-    /*FUNCTION>*/
-
-    // None of the following functions can be called with the arguments supplied:
-    //greating(age=33,"basked", "teksab")
+/*FUNCTION>*/
+*/
 
     println("Hello, World")
 }
