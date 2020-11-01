@@ -37,8 +37,7 @@ val age2 = 34
 
 fun main(argd: Array<String>) {
 /*
-/*
-/*< TYPES KOTLIN */
+/*<TYPES KOTLIN */
     libBas.separTheme("TYPES", 50)
     age = 70
     var temperature = 1
@@ -106,7 +105,9 @@ fun main(argd: Array<String>) {
     println("Safe cast Int to String = $obj4. No exception!!!")
 /*TYPES KOTLIN>*/
 */
-/*< STRING TEMPLATES*/
+/*
+/*<STRING TEMPLATES*/
+
     libBas.separTheme("STRING TEMPLATES")
     println("Имя: " + firstName2 + ", фамилия: " + lastnametName2 + ",в возрасте: " + age2 + " лет зарабатывает 1500$")
     //equivalent for kotlin
@@ -136,8 +137,69 @@ fun main(argd: Array<String>) {
 /*STRING TEMPLATES>*/
 */
 
-    libBas.separTheme("basket", 40)
-    libBas.separTheme("Интерполяция строк", 40)
+/*<FUNCTION*/
+    libBas.separTheme("FUNCTION")
+    /*1*/
+    fun greating(firstName: String, lastName: String) {
+        println("[Ex1] Hello, $firstName, $lastName")
+    }
+
+    /*2 overload whith other param*/
+    fun greating(firstName: String, lastName: String, age: Int = 34) {
+        println("[Ex2] Hello, $firstName, $lastName, $age")
+    }
+    /*3 Type and return syntacsis*/
+    /*
+         fun greating(firstName: String, lastName: String, nick: String = "teksab"): String {
+            return "[Ex3]$firstName, $lastName, $nick [Ex3]"
+        }
+     */
+
+    /*4* equivalent prev, if use one operator */
+    fun greating(firstName: String, lastName: String, nick: String = "teksab") =
+        "[Ex4] Hello, $firstName, $lastName, $nick"
+
+    /*5 precoditions*/
+    fun greating(firstName: String) {
+        require(!firstName.isBlank()) { "Укажите имя" }
+        println("[Ex5] Hello, $firstName ")
+    }
+
+    /*6 precoditions*/
+    fun greating(firstName: String, age: Int = 0) {
+        require(!firstName.isBlank()) { "Укажите имя" }
+        //!!require(age=0) {"ds"} = TODO("Почему только с отрицанием  != работает ??")
+        require(age != 0) { "Ещё не родился? Введи нужный возраст!" }
+        println("[Ex6] Hello, $firstName, age=$age")
+        //()=TODO("""Как работают остальные функции requireNotNull(), check(), assert()" +
+
+    }
+    /*IMPLEMENTATIONS FUNCTION*/
+    /*1*/greating("basked", "teksab")
+    /*2*/greating(age = 33, firstName = "basked", lastName = "teksab")
+    /*3*/println(greating("basked", "teksab", "bas"))
+    /*5*/
+    try {
+        greating("")
+    } // Exception in thread "main" java.lang.IllegalArgumentException: Ук ажите имя}
+    catch (e: Exception) {
+        println("""[Ex5] Exception in thread "main" java.lang.IllegalArgumentException: Укажите имя""")
+    }
+    /*5-1*/ greating("[Ex5-1] basked")
+
+    /*6*/
+    try {
+        greating("basked", 0)
+    } catch (e: Exception) {
+        println("""[Ex6] Exception in thread "main" java.lang.IllegalArgumentException: Ещё не родился? Введи нужный возраст!""")
+    }
+    /*6-1*/ greating("[Ex6-1] basked", 35)
+
+    /*FUNCTION>*/
+
+    // None of the following functions can be called with the arguments supplied:
+    //greating(age=33,"basked", "teksab")
+
     println("Hello, World")
 }
 
