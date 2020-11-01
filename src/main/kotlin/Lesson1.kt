@@ -245,3 +245,9 @@ fun main(argd: Array<String>) {
 to be continued with
 https://youtu.be/ArvUrjnvK-w?list=PL1osRk8H9xa4FGzIopBXXkv9tU4ndL6A5&t=3717
 */
+
+/*
+01.11.2020
+to be continued with
+https://youtu.be/ArvUrjnvK-w?t=4761
+ */
