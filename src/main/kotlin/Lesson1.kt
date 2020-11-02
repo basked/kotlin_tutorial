@@ -69,10 +69,23 @@ fun greating(firstName: String, age: Int = 0) {
     require(age != 0) { "Ещё не родился? Введи нужный возраст!" }
     println("[Ex6] Hello, $firstName, age=$age")
     //()=TODO("""Как работают остальные функции requireNotNull(), check(), assert()" +
-
 }
+
 /*<FUNCTIONS>*/
 */
+/*
+/*<LOOPS*/
+var counter = 0
+
+/*LOOPS>*/
+*/
+/*
+/*<COLLECTIONS*/
+
+
+/*COLLECTIONS>*/
+*/
+
 fun main(argd: Array<String>) {
 /*
 /*<TYPES KOTLIN */
@@ -235,7 +248,92 @@ fun main(argd: Array<String>) {
 
 /*FUNCTION>*/
 */
+/*
+/*<LOOPS*/
+    while (counter < 31) {
+        println("December ${++counter}")
+    }
+// выполниться условие хотябы один раз
+    /*do {
+        val command = readLine();
+        println("command: $command")
+    } while (command != "quit")
+    Process finished with exit code -1073741819 (0xC0000005)=TODO('Валится с ошибкой')
+    */
 
+    //DIAPAZONS
+    val oneToFive = 1..5
+    val letters = 'a'..'z'
+    val words = "kotlin".."Yaml"
+    val words2 = "Kotlin".."Yaml"
+
+    /*1*/
+    if (3 in oneToFive) {
+        println("3 in diapazone 1..5")
+    } else println("3 not in diapazone 1..5")
+    /*2*/
+    if ('d' in letters) {
+        println("'d' in diapazone 'a'..'z'")
+    } else println("'d' not in diapazone 'a'..'z'")
+    /*3*/
+    if ("Kotlin" in words) {
+        println("Kotlin in word")
+    } else {
+        println("Kotlin not in word")
+    }
+    /*3-1*/
+    if ("Kotlin" in words2) {
+        println("Kotlin in word")
+    } else {
+        println("Kotlin not in word")
+    }
+    for (letter in letters) {
+        print(letter)
+    }
+    println()
+/*LOOPS>*/
+*/
+/*
+/*<COLLECTIONS*/
+    // ARRAYS
+    val array1: Array<Int> = arrayOf<Int>(1, 2, 3, 4)
+    // equivalent
+    val array2 = arrayOf(1, 2, 3, 4)
+// array= arrayOf(5)// Val cannot be reassigned (ссылка не может ссылаться на другой массив)
+// но можно изменить элемент массива
+    array1[3] = 34
+    array2[3] = 34
+    println("${array1[3]},${array2[3]}")
+    //LISTS
+    val list = listOf("One", "Two", "Tree")
+// list.add, list[0]="Onne" добавить нельзя
+// но можно изменить
+    val mutableList = mutableListOf("One", "Two", "")
+    mutableList[2] = "Tree"
+    mutableList.add("Four")
+    for (ml in mutableList) {
+        println(ml)
+    }
+// PAIR
+    val pair = Pair("One", "Two")
+    println("first=${pair.first},second=${pair.second}")
+    val infixPair = 1 to "One"
+    val daysOfWeek = mutableMapOf(
+        1 to "M",
+        2 to "T",
+        3 to "W",
+        4 to 'S',
+        5 to "T",
+        6 to "S",
+        7 to "S"
+    )
+    for ((f, s) in daysOfWeek) {
+        println("Fist pair $f, Second $s")
+    }
+ // TRIPLETS
+ val (a,b,c) = Triple(32,"Basked", listOf(1,2,3))
+/*COLLECTIONS>*/
+*/
     println("Hello, World")
 }
 
@@ -251,3 +349,4 @@ https://youtu.be/ArvUrjnvK-w?list=PL1osRk8H9xa4FGzIopBXXkv9tU4ndL6A5&t=3717
 to be continued with
 https://youtu.be/ArvUrjnvK-w?t=4761
  */
+
