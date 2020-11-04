@@ -12,7 +12,7 @@ class TestSalary {
     }
 
     @Test
-    fun testNegativeSalery() {
+    fun testNegativeSalary() {
         val thrown = assertThrows<IllegalArgumentException> {
             japaneseSalary((-10).toBigDecimal(), 1012 )
         }
