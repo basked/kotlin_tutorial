@@ -15,6 +15,18 @@ fun fib(n:Int):Int{
         return n
     } else return fib(n-1)+ fib(n-2)
 }
+fun  fib2(n:Int):Int {
+    var a = 1;
+    var b = 1;
+    var i=3;
+    while(i<=n){
+        val c= a + b
+        a = b
+        b = c
+        i++
+    }
+    return b;
+}
 
 fun main() {
     separTheme("Дополнение к уроку про типы")
@@ -33,7 +45,8 @@ fun main() {
     println(12.2.print())
     println(true.print())
     separTheme("Функция фибоначчи")
-    println(fib(5))
+//    println(fib(3))
+    println(fib2(77))
 }
 //TO BE CONTINUE 05.11.2020
 //https://youtu.be/AbbKLvjLdm0?list=PL1osRk8H9xa4FGzIopBXXkv9tU4ndL6A5&t=2392
