@@ -1,4 +1,4 @@
-/*
+package l1/*
 /*<COMMENTS*/
 
 // One line comments
@@ -232,9 +232,9 @@ fun main(argd: Array<String>) {
     /*5*/
     try {
         greating("")
-    } // Exception in thread "main" java.lang.IllegalArgumentException: Ук ажите имя}
+    } // Exception in thread "l1.main" java.lang.IllegalArgumentException: Ук ажите имя}
     catch (e: Exception) {
-        println("""[Ex5] Exception in thread "main" java.lang.IllegalArgumentException: Укажите имя""")
+        println("""[Ex5] Exception in thread "l1.main" java.lang.IllegalArgumentException: Укажите имя""")
     }
     /*5-1*/ greating("[Ex5-1] basked")
 
@@ -242,7 +242,7 @@ fun main(argd: Array<String>) {
     try {
         greating("basked", 0)
     } catch (e: Exception) {
-        println("""[Ex6] Exception in thread "main" java.lang.IllegalArgumentException: Ещё не родился? Введи нужный возраст!""")
+        println("""[Ex6] Exception in thread "l1.main" java.lang.IllegalArgumentException: Ещё не родился? Введи нужный возраст!""")
     }
     /*6-1*/ greating("[Ex6-1] basked", 35)
 

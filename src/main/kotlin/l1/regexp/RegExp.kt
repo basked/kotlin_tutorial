@@ -1,4 +1,6 @@
-package libBas
+package l1.regexp
+
+import libBas.separTheme
 
 /*
 регулярные выражения

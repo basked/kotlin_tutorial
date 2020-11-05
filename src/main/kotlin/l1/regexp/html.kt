@@ -1,4 +1,4 @@
-package libBas
+package l1.regexp
 
 fun html1(){
     val htmlText= "<html><head>Heading</head><body><div><p>Block <b>div1</div><div>Block div2</div></body></html>"

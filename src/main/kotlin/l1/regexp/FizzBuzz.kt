@@ -1,4 +1,4 @@
-package libBas
+package l1.regexp
 
 // делится на 3 -> Fizz
 // делится на 5 -> Buzz

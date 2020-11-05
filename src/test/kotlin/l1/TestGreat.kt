@@ -1,4 +1,4 @@
-
+package l1
 import libBas.testGreating
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

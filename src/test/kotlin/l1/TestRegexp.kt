@@ -1,4 +1,6 @@
-import libBas.date
+package l1
+
+import l1.regexp.date
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test

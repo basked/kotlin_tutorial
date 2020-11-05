@@ -1,5 +1,5 @@
-
-import libBas.fizzBuzz
+package l1
+import l1.regexp.fizzBuzz
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
