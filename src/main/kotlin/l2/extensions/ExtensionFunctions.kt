@@ -2,6 +2,7 @@ package l2.extensions
 
 import libBas.separTheme
 
+fun String.reverz(): String = (this.reversed())
 fun String.lastCharOf(): Char = this[this.length - 1]
 fun String.lastCharOf2(): Char = get(length - 1)
 
@@ -25,11 +26,11 @@ fun String.allMatchesOf(regExp: String): List<String> {
 
 fun main() {
     separTheme("Расширение типа String- последний символ строки")
+    println("teksab".reverz())
     println("basket".lastCharOf())
     println("basked".lastCharOf2())
     separTheme("Расширение типа List- первый элемент списка")
     println(listOf("basket", "sony", "ice", "hip").getFirstElement())
     separTheme("Расширение типа String- list<String> по шаблону из строки")
-
-   "<html><div></div></html>".allMatchesOf("""<[^>]+>""").forEach { println(it) }
+    "<html><div>bask<table></table></div></html>".allMatchesOf("""<[^>]+>""").forEach { println(it) }
 }
