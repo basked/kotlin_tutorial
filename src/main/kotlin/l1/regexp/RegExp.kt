@@ -182,7 +182,7 @@ fun passw() {
 fun main() {
     val line = "abc 123 def"
 //    val regexp="\\d{3}"
-    // есть ли три цифры подря в строке
+    // есть ли три цифры подряд в строке
     val regexp = """.*\d{3}.*"""
     val pattern = regexp.toRegex()
     println(line.matches(pattern))

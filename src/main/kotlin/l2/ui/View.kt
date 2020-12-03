@@ -6,7 +6,7 @@ interface View {
     fun whoAmI() = println("I'm a view!") // можно переопредять
 }
 
-//Первый интерфейс
+//Второй  интерфейс
 interface Shape {
     fun whoAmI() = println("I'm a shape")
 }
